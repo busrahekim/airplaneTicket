@@ -11,7 +11,7 @@ const h = document.getElementById("EndTooltiptext");
 populateUI();
 
 let ticketPrice = +planeSelect.value;
-
+/*
 w.addEventListener("click", (e) => {
   console.log("w");
   ticketPrice = +parseInt(w.textContent);
@@ -29,7 +29,7 @@ h.addEventListener("click", (e) => {
   ticketPrice = +parseInt(h.textContent);
   updateSelectedCount();
 });
-
+*/
 
 function setplaneData(planeIndex, planePrice) {
   localStorage.setItem("selectedplaneIndex", planeIndex);
