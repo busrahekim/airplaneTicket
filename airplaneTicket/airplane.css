@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 8px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat #StartTooltiptext {
+  visibility: hidden;
+  width: 30px;
+  height: 20px;
+  font-size: 10px;
+  background-color: rgb(98, 95, 95);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top: -5px;
+  right: 105%;
+  position: absolute;
+  z-index: 1;
+}
+
+.seat:hover #StartTooltiptext {
+  visibility: visible;
+}
+
+.seat #MidTooltiptext {
+  visibility: hidden;
+  width: 30px;
+  height: 20px;
+  font-size: 10px;
+  background-color: rgb(98, 95, 95);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -15px; 
+  position: absolute;
+  z-index: 1;
+}
+
+.seat:hover #MidTooltiptext {
+  visibility: visible;
+}
+
+.seat #EndTooltiptext {
+  visibility: hidden;
+  width: 30px;
+  height: 20px;
+  font-size: 10px;
+  background-color: rgb(98, 95, 95);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top: -5px;
+  left: 105%; 
+  position: absolute;
+  z-index: 1;
+}
+
+.seat:hover #EndTooltiptext {
+  visibility: visible;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat.sold {
+  background-color: #fff;
+}
+
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat:not(.sold):hover a p.new-label:after {
+  content: 'ADD';
+}
+
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 0 1px;
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
+}
+
+.divider{
+    width: 50px;
+    height: 1px;
+    margin: 10px 0;
+}
